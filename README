@@ -1,0 +1,34 @@
+Quick and dirty script to convert txt subtitle files into srt.
+
+At the moment code is far from being beautifull. I guess it will clean up over time, once the code will evolve.
+
+This converter was created for my personal use. This is what I care about most here. If it doesnt work for you, too bad.
+If you want to add some features, feel free to do so. On the other hand, I will be adding features which will help me ;)
+
+Syntax:
+
+Conv.py example.txt >example.srt       #will use default 23.976 fps
+Conv.py example.txt 25 >example.srt    #will output subtitles at 25 fps
+Conv.py example.txt 25 24 >example.srt #will output subtitles at 25 fps, but read them from txt at 24 fps
+
+Recognized formats examples:
+
+1) {start frame}{end frame}:
+{100}{200}Subtitle line
+
+2) [tenth of second]:
+[100][200]Subtitle line
+
+This format will set output fps to 10 automatically.
+
+3) time:
+01:02:03:Subtitle line
+
+
+TODO:
+
+1) Make code better ;)
+2) Write into srt instead of stdout
+3) Create some gui
+4) Autodetect fps from movie (ffprobe?)
+
