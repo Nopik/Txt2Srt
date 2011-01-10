@@ -5,6 +5,10 @@ import sys
 import re
 from decimal import *
 
+if( len( sys.argv ) < 2 ):
+	print "Usage: " + sys.argv[0] + " subtitle_file.txt [output fps] [input_fps] >subtitle_file.srt"
+	sys.exit( -1 )
+
 fi = open(sys.argv[1], 'r')
 
 lines = fi.readlines()
